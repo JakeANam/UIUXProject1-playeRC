@@ -88,7 +88,7 @@ section>a>img {
     margin-bottom: 20px;
 }
 
-/* 메인 화면 상품 목록 */
+/* 메인 화면 상품 목록 & 전체 상품 목록 */
 section .shopList {
     margin: 100px 0;
 }
@@ -109,7 +109,8 @@ section .shopList>h3 {
     font-size: 30px;
 }
 
-section .shopList .itemList li{
+section .shopList .itemList li,
+section .shopList .allItemList li {
     box-sizing: border-box;
     width: 285px;
     margin: 0 10px;
@@ -119,7 +120,7 @@ section .shopList .itemList li{
     padding-bottom: 35px;
 }
 
-section .shopList .itemList li:first-child{
+section .shopList .itemList li:first-child {
     margin-left: 0;
 }
 
@@ -127,13 +128,27 @@ section .shopList .itemList li:last-child{
     margin-right: 0;
 }
 
-section .shopList .itemList li a{
+section .shopList .allItemList li {
+    margin-bottom: 10px;
+}
+
+section .shopList .allItemList li:nth-of-type(4n - 3) {
+    margin-left: 0;
+}
+
+section .shopList .allItemList li:nth-of-type(4n) {
+    margin-right: 0;
+}
+
+section .shopList .itemList li a,
+section .shopList .allItemList li a {
     width: 100%;
     height: 100%;
     border-radius: 20px;
 }
 
-section .shopList .itemList li .shopImg {
+section .shopList .itemList li .shopImg, 
+section .shopList .allItemList li .shopImg {
     width: 215px;
     height: 215px;
     position: relative;
@@ -146,7 +161,8 @@ section .shopList .itemList li .shopImg {
     text-align: center;
 }
 
-section .shopList .itemList li img {
+section .shopList .itemList li img,
+section .shopList .allItemList li img {
     height: 100%;
     transition: 0.5s;
     display: inline-block;
