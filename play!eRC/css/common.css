@@ -1,0 +1,341 @@
+@charset "utf-8";
+
+/* 전체적인 설정 */
+/* 변수, 상용구 생성*/
+:root {
+    /* colors */
+    --black0: #000000;
+    --black1: #333333;
+    --black2: #555555;
+    --blue1: #6AB1E2;
+    --blue2: #8CCAEE;
+    --blue3: #CBECFC;
+    
+    /* transform */
+    --setAxisCenter: translate(-50%, -50%);
+    --setHorizonalCenter: translateX(-50%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 300;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+input[type="submit"] {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+/* 너비 1,200로 설정 */
+.wrap {
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+}
+
+/* 헤더 */
+header {
+  background-color: var(--blue3);
+  width: 100%;
+  min-width: 1200px;
+  height: 150px;
+}
+
+/* 헤더로고 */
+header .headLogo, header .headLogo a {
+    width: 200px;
+    height: 100px;
+    float: left;
+}
+header .headLogo  img {
+    width: 200px;
+    height: 75px;
+    margin: 12.5px 0;
+    float: left;
+}
+
+/* 검색엔진 */
+header form[name="toSearch"] {
+    width: 320px;
+    padding: 0 20px;
+    float: left;
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+}
+
+header input[name="search"] {
+    width: 265px;
+    height: 30px;
+    padding-left: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--blue1);
+}
+
+header form span {
+    width: 40px;
+    height: 40px;
+    display:inline-block;
+    margin: 5px 0;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+header input[type="submit"] {
+    background-color: var(--blue1);
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    display: block;
+}
+
+/* 헤더 메뉴 */
+header nav {
+    height: 100px;
+    line-height: 100px;
+    float: right;
+}
+
+header nav>ul>li {
+    width: 145px;
+    text-align: center;
+    font-size: 25px;
+    float: left;
+}
+
+header nav>ul>li>a {
+    width: 100%;
+    color: var(--black2);
+}
+
+header nav .subMenu {
+    width: 100%;
+    min-width: 1200px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    background-color: var(--blue1);
+}
+
+header nav .subMenu>li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+header nav .mainMenu>li:first-of-type>.subMenu {
+    display: block;
+}
+
+header nav .subMenu>li>a {
+    color: #ffffff;
+    width: 100%;
+}
+
+header nav a:hover{
+    font-weight: bolder;
+    color: var(--black1);
+}
+
+/* 헤더 라운드 버튼 */
+header .roundButtons {
+    padding: 12.5px 0;
+    float: right;
+}
+
+header .roundButtons li {
+    float: left;
+    width: 45px;
+    height: 45px;
+    margin: 15px 2.5px;
+}
+
+header .roundButtons a {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+header .roundButtons img {
+    width: 100%
+}
+header .roundButtons img:hover {
+    opacity: 0.5;
+}
+
+/* 푸터 */
+footer {
+  width: 100%;
+  min-width: 1200px;
+  background-color: var(--blue1);
+  padding: 50px 0;
+}
+
+/* 푸터 메뉴 */
+footer .footerMenu {
+    width: 790px;
+    height: 300px;
+    float: left;
+}
+
+footer .footerMenu ul {
+    float: left;
+    width: calc(25% - 2px);
+    height: 100%;
+    text-align: center;
+}
+
+footer .footerMenu li {
+    height: 35px;
+    line-height: 35px;
+}
+
+footer .footerMenu li:first-of-type {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 0;
+}
+
+footer .footerMenu li:hover {
+    font-weight: bold;
+}
+
+footer .footerMenu a {
+    color: #ffffff;
+}
+/* 푸터 우측 */
+footer .footerRight {
+    width: 390px;
+    height: 300px;
+    float: left;
+}
+
+footer .footerMenu {
+    margin-right: 10px;
+}
+
+footer .footerRight {
+    margin-left: 10px;
+}
+
+/* 푸터 구독 */
+footer .subscribe {
+    padding: 20px 0 0;
+}
+
+footer .subscribe p {
+    color: #ffffff;
+}
+
+footer .subscribe span{
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer input[name="subscribe"] {
+    width: 250px;
+    height: 30px;
+    padding-left: 5px;
+    border-radius: 10px;
+    border: 2px solid var(--black2);
+}
+
+footer form span {
+    width: 45px;
+    height: 45px;
+    display:inline-block;
+    margin: 5px 0;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+footer input[type="submit"] {
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue3);
+    font-weight: bold;
+    font-size: 15px;
+    color: var(--blue1);
+    border: 1px solid #ffffff;
+    display: block;
+}
+
+/* 푸터 sns */
+footer .sns {
+    width: 390px;
+    height: 50px;
+    padding: 5px 0;
+    
+}
+
+footer .sns ul {
+    display: inline-block;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+footer .sns li {
+    float: left;
+    margin: 0 5px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+footer .sns a {
+    width: 100%;
+    height: 100%;
+}
+
+footer .sns img{
+    width: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+footer .sns a:hover img{
+    opacity: 0.5;
+}
+
+/* 푸터 카피 */
+footer .copy {
+    height: 60px;
+    line-height: 60px;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    clear: left;
+    color: #ffffff;
+    border-top: 1px solid #ffffff;
+}
+
+/* 검색, 구독버튼 (헤더 푸터 공통)*/
+
+input[type="submit"]:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}

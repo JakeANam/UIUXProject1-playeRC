@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- utf-8, 뷰포트 설정 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 폰트 설정(Noto sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- CSS 설정 -->
+    <link rel="stylesheet" href="./css/common.css" type="text/css">
+    <link rel="stylesheet" href="./css/items.css" type="text/css">
+    <!-- jQuery, Javascript 설정 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./scripts.js" defer></script>
+    <title>play!eRC</title>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+    <div class="wrap">
+        <!-- 헤더 로고 -->
+        <div class="headLogo">
+            <a href="./index.html">
+                <img src="./logoNicons/logo_title.png" alt="header logo">
+            </a>
+        </div>
+        <form name="toSearch" action=javascript:goSearch()>
+            <input type="search" name="search" placeholder="제품을 검색해보세요.">
+            <span><input type="submit" value="검색"></span>
+
+        </form>
+              
+      <!-- 라운드 버튼 -->
+      <div class="roundButtons">
+        <ul>
+            <li><a href="#"><img src="./logoNicons/support.png" alt=""></a></li>
+            <li><a href="#"><img src="./logoNicons/member.png" alt=""></a></li>
+            <li><a href="#"><img src="./logoNicons/cart.png" alt=""></a></li>
+            <li><a href="#"><img src="./logoNicons/announcement.png" alt=""></a></li>
+        </ul>
+    </div>
+
+    <!-- 헤더메뉴 -->
+    <nav>
+        <ul class="mainMenu">
+            <li>
+                <a href="#">검색/구매</a>
+                <ul class="subMenu">
+                    <li>
+                        <a href="#">행사상품 찾기</a>
+                    </li>
+                    <li>
+                        <a href="#">종류별로 찾기</a>
+                    </li>
+                    <li>
+                        <a href="#">제조사별로 찾기</a>
+                    </li>
+                    <li>
+                        <a href="#">상세정보 찾기</a>
+                    </li>
+                    <li>
+                        <a href="#">희귀, 한정판 찾기</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">중고품/수리</a>
+                <ul class="subMenu">
+                    <li><a href="#">최신중고품</a></li>
+                    <li><a href="#">중고품매매</a></li>
+                    <li><a href="#">수리점검색</a></li>
+                    <li><a href="#">수리위탁예약</a></li>
+                    <li><a href="#">부품, 공구, 액세서리 찾기</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">커뮤니티</a>
+                <ul class="subMenu">
+                    <li><a href="#">RC동호회</a></li>
+                    <li><a href="#">트랙, 스테이지 대여</a></li>
+                    <li><a href="#">행사 찾기</a></li>
+                    <li><a href="#">대회 찾기</a></li>
+                    <li><a href="#">RC, 드론 교육 영상</a></li>
+                    <li><a href="#">RC, 드론 교육장 찾기</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    </div>
+    </header>
+    
+    <!-- <form name="itemCosts">
+        <input type="hidden" name="itemCost">
+    </form> -->
+
+    <!-- 컨텐츠 -->
+    <section>
+    <div class="wrap">
+        <!-- 상품개요 -->
+        <div class="itemInfo">
+            <!-- 상품 사진 -->
+            <div class="imgInfo">
+                <div class="itemImg">
+                    <img src="./images/abisma_hurricane1.jpg" alt="이미지">
+                </div>
+                <ul class="imgLists">
+                    <li><img src="./images/abisma_hurricane1.jpg" alt="이미지버튼1"></li>
+                    <li><img src="./images/abisma_hurricane2.jpg" alt="이미지버튼2"></li>
+                    <li><img src="./images/abisma_hurricane3.jpg" alt="이미지버튼3"></li>
+                </ul>
+            </div>
+            
+            <!-- 개요 표 -->
+            <table class="item_table">
+                <tr>
+                    <td colspan="2">
+                        <h1>Abisma Hurricane</h1>
+                    </td>
+                </tr>
+                <tr>
+                    <th>판매가</th>
+                    <td>₩ <p class="cost">200,000</p></td>
+                </tr>
+                <tr>
+                    <th>구매옵션</th>
+                    <td>
+                        옵션 보기
+                        <span class="showOption">&and;</span>
+                        <ul class="optionList">
+                            <li>
+                                추가 배터리<span>(￦50,000)</span>
+                                <ul class="counting">
+                                    <li>&lt;</li>
+                                    <li>0</li>
+                                    <li>&gt;</li>
+                                    <span>pOptions</span>
+                                </ul>
+                            </li>
+                            <li>충전기<span>(￦25,000)</span>
+                                <ul class="counting">
+                                    <li>&lt;</li>
+                                    <li>0</li>
+                                    <li>&gt;</li>
+                                    <span>pOptions</span>
+                                </ul>
+                            </li>
+                            <li>추가 타이어<span>(￦5,000)</span>
+                                <ul class="counting">
+                                    <li>&lt;</li>
+                                    <li>0</li>
+                                    <li>&gt;</li>
+                                    <span>pOptions</span>
+                                </ul>
+                            </li>
+                            <li>추가 엔진<span>(￦100,000)</span>
+                                <ul class="counting">
+                                    <li>&lt;</li>
+                                    <li>0</li>
+                                    <li>&gt;</li>
+                                    <span>pOptions</span>
+                                </ul>
+                            </li>
+                        </ul>
+  
+                    </td>
+                </tr>
+                <tr>
+                    <th>할인옵션</th>
+                    <td>
+                        옵션 보기
+                        <span class="showOption">&and;</span>
+                        <ul class="optionList">
+                            <li>
+                                쿠폰 사용
+                                <select name="" id="">
+                                    <option value="">쿠폰 없음</option>
+                                    <option value="">5000원 할인 쿠폰</option>
+                                </select>
+                            </li>
+                            <li>
+                                상품권 사용
+                                <select name="" id="">
+                                    <option value="">상품권 없음</option>
+                                </select>
+                            </li>
+                            <li>
+                                상품권 추가할인 선택
+                                <select name="">
+                                    <option value="">선택 안함</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>구매수량</th>
+                    <td>
+                        <ul class="counting">
+                            <li>&lt;</li>
+                            <li>1</li>
+                            <li>&gt;</li>
+                            <span>aOptions</span>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>총합계금액</th>
+                    <td>
+                    ￦ 200,000
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <ul class="itemDecision">
+                            <li><a href="#">장바구니</a></li>
+                            <li><a href="#">찜하기</a></li>
+                            <li><a href="#">구매하기</a></li>
+                        </ul>    
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 상세정보 태그 -->
+        <ul class="infoTags">
+            <li>상품정보</li>
+            <li>구매후기</li>
+            <li>상품문의</li>
+            <li>배송, 교환, 반품 안내</li>
+        </ul>
+        
+
+        <!-- 상세정보 내용 -->
+        <ul class="infoContent">
+            <!-- 상품 정보 -->
+            <li>
+                <ul>
+                    <li>제조사: Abisma</li>
+                    <li>제품번호: 18002</li>
+                    <li>중량: 617g</li>
+                    <li>최고속도: 617g</li>
+                    <li>상품 구성</li>
+                </ul>
+                <img src="./images/absima-hurricane4.jpg" alt="상세정보">        
+            </li>
+
+            <!-- 구매후기 -->
+            <li>
+                <a href="#">후기쓰기</a>
+                <ul class="itemReply">
+                    <li>
+                        <div class="replyImg">
+                            <img src="./logoNicons/member.png" alt="회원 사진">
+                        </div>
+                        <p class="replyMember">player100</p>
+                        <p class="replyStars">&starf;&starf;&starf;&starf;&starf;</p>
+                        <p class="replyContent">
+                            내가 찾던 차예요!!
+                        </p>
+                    </li>
+                    <li>
+                        <div class="replyImg">
+                            <img src="./images/회원사진2.jpg" alt="회원 사진">
+                        </div>
+                        <p class="replyMember">징 치는 백형</p>
+                        <p class="replyStars">&starf;&starf;&starf;&starf;</p>
+                        <p class="replyContent">
+                            징허게 재밌네ㅋ
+                        </p>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- 상품문의 -->
+            <li>
+                <a href="#">문의하기</a>
+                <ul class="itemReply">
+                    <li>
+                        <div class="replyImg">
+                            <img src="./images/회원사진1.jpg" alt="회원 사진">
+                        </div>
+                        <p class="replyMember">차타남</p>
+                        <p class="qnaContent">
+                            튜닝 부품은 어디서 찾으면 되나요?
+                        </p>
+                    </li>
+                    <li class="qnaAnswer">
+                        <div class="replyImg">
+                            <img src="./logoNicons/logo.png" alt="회원 사진">
+                        </div>
+                        <p class="replyMember">Re: 차타남</p>
+                        <p class="qnaContent">
+                            안녕하세요 차타남 님! 현재 해당 상품의 튜닝 부품 재고는 없지만 추후 입고 예정입니다.
+                        </p>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- 배송 교환 반품안내 -->
+            <li>
+                <h3>배송안내</h3>
+                <ul>
+                    <li>택배사 : 우체국택배</li>
+                    <li>당일 출고 마감 시간은 12시 이며, 이후의 주문은 다음날 배송 됩니다.</li>
+                    <li>물량이 많은 날은 예고 없이 배송이 지연될 수 있음을 미리 안내 드립니다. 양해 부탁 드립니다.</li>
+                    <li>배송 송장 확인은 출고 마감 이후  20시 이후 부터 가능합니다.</li>
+                    <li>평균 배송일은 2~3일입니다.</li>
+                    <li>기본 배송료는 3,000원이며 기본 배송료는 3,000원 이며 도서,산간,오지 일부 지역은 배송비가 추가될 수 있습니다.</li>
+                    <li>30,000원 이상 구매 시 무료배송 입니다.</li>
+                    <li>배송 송장 확인은 출고 마감 이후  20시 이후 부터 가능합니다.</li>
+                </ul>
+ 
+                <h3>교환 및 반품, 환불</h3> 
+                <ul>
+                    <li>교환 및 반품을 원하시는 경우 본 사이트의 고객센터를 찾아주십시오.</li>
+                    <li>상품의 개봉으로 상품의 포장 및 가치 훼손 시 상품 수령 후 7일 이내라도 교환 및 반품이 불가능합니다.</li>
+                    <li>고객 변심에 의한 교환 및 반품에 발생하는 비용은 고객님이 부담하셔야 합니다. (제품 하자, 배송오류의 경우는 제외)</li>
+                    <li>일부 상품은 신모델 출시, 부품가격 변동 등 제조사 사정으로 가격이 변동될 수 있습니다.</li>
+                    <li>일부 특가 상품의 경우, 수령 후 고객님의 단순 변심에 의한 교환 및 반품이 불가할 수 있사오니, 각 상품의 상품 상세정보는 꼭 참조해주십시오.</li>
+                </ul>
+
+                <h3>교환 및 반품이 가능한 경우</h3>
+                <ul>
+                    <li>상품을 공급 받으신 날로부터 7일이내 단, 단순변심에 의한 경우 포장을 개봉하였거나 포장이 훼손되어 상품가치가 상실된 경우에는 교환/반품이 불가능합니다.</li>
+                    <li>공급받으신 상품 및 용역의 내용이 표시.광고 내용과 다르거나 다르게 이행된 경우에는 포장이 훼손되었더라도 교환/반품이 가능합니다.</li>
+                </ul>
+
+                <h3>교환 및 반품이 불가능한 경우</h3>
+                <ul>
+                    <li>고객님의 책임 있는 사유로 상품등이 내용물의 멸실 또는 훼손된 경우. 단, 상품의 내용을 확인하기 위하여 포장 등을 훼손한 경우는 제외</li>
+                    <li>고객님의 사용 또는 일부 소비에 의하여 상품의 가치가 현저히 감소한 경우</li>
+                    <li>시간의 경과에 의하여 재판매가 곤란할 정도로 상품등의 가치가 현저히 감소한 경우</li>
+                    <li>복제가 가능한 상품등의 포장을 훼손한 경우</li>
+                </ul> 
+                
+                <h3>AS안내</h3>
+                <ul>
+                    <li>소비자분쟁해결 기준(공정거래위원회 고시)에 따라 피해를 보상받을 수 있습니다.</li>
+                    <li>구매처의 주요 내역 등 구매를 증명할 수 있는 영수증 ,카드 이력 등 사유를 반드시 첨부 바랍니다.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    </section>
+    
+    <!-- 푸터 -->
+    <footer>
+    <div class="wrap">
+        <div class="footerMenu">
+            <ul>
+                <li><a href="#">상품 구매</a></li>
+                <li><a href="#">모든 제품 보기</a></li>
+                <li><a href="#">할인 행사 상품</a></li>
+                <li><a href="#">중고품 매매</a></li>
+                <li><a href="#">쿠폰, 기프트 카드</a></li>
+                <li><a href="#">선물하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">멤버 서비스</a></li>
+                <li><a href="#">수리 센터</a></li>
+                <li><a href="#">모든 동호회 보기</a></li>
+                <li><a href="#">모든 대회 & 행사</a></li>
+                <li><a href="#">RC 교육</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">고객 지원</a></li>
+                <li><a href="#">사이트 이용 방법</a></li>
+                <li><a href="#">기술 지원</a></li>
+                <li><a href="#">자주 묻는 질문</a></li>
+                <li><a href="#">결재, 배송 확인</a></li>
+                <li><a href="#">구매품 파손 신고</a></li>
+                <li><a href="#">Q & A</a></li>
+            </ul>
+            
+            <ul>
+                <li><a href="#">about play!eRC</a></li>
+                <li><a href="#">회사 개요</a></li>
+                <li><a href="#">개인 정보 보호 정책</a></li>
+                <li><a href="#">채용 정보</a></li>
+                <li><a href="#">연락처, 오시는 길</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+        </div>
+        <div class="footerRight">
+            <div class="subscribe">
+                <p>
+                    세일 행사, 인기 상품을 찾고 계신가요?<br>
+                    대회나 동호회에 참가하고 싶나요?<br>
+                    RC나 드론이 처음이라 배우고 싶나요?<br>
+                    <span>구독하셔서 더 많은 정보를 받아보세요!!!</span>
+                </p>
+                <form name="toSubscribe" action=javascript:goSubscribe()>
+                    <input type="email" name="subscribe" placeholder="이메일을 입력해주세요">
+                    <span><input type="submit" value="구독"></span>
+                </form>
+            </div>
+            
+            <div class="sns">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="./logoNicons/facebook.png" alt="sns1">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./logoNicons/instagram.png" alt="sns2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./logoNicons/youtybe.png" alt="sns3">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./logoNicons/kakaotalk.png" alt="sns4">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./logoNicons/line.png" alt="sns5">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./logoNicons/X.png" alt="sns6">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./logoNicons/tiktok.png" alt="sns7">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+        <div class="copy">
+            Copyright ⓒ Eo-jin Nam & play!eRC
+        </div>
+    </div>
+    </footer>
+</body>
+</html>

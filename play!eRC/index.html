@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- utf-8, 뷰포트 설정 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 폰트 설정(Noto sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- CSS 설정 -->
+    <link rel="stylesheet" href="./css/common.css" type="text/css">
+    <link rel="stylesheet" href="./css/main.css" type="text/css">
+    <!-- jQuery, Javascript 설정 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./scripts.js" defer></script>
+    <title>play!eRC</title>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+    <div class="wrap">
+        <!-- 헤더 로고 -->
+        <div class="headLogo">
+            <a href="./index.html">
+                <img src="./logoNicons/logo_title.png" alt="header logo">
+            </a>
+        </div>
+        <form name="toSearch" action=javascript:goSearch()>
+            <input type="search" name="search" placeholder="제품을 검색해보세요.">
+            <span><input type="submit" value="검색"></span>
+
+        </form>
+              
+      <!-- 라운드 버튼 -->
+      <div class="roundButtons">
+        <ul>
+            <li><a href="#"><img src="./logoNicons/support.png" alt=""></a></li>
+            <li><a href="#"><img src="./logoNicons/member.png" alt=""></a></li>
+            <li><a href="#"><img src="./logoNicons/cart.png" alt=""></a></li>
+            <li><a href="#"><img src="./logoNicons/announcement.png" alt=""></a></li>
+        </ul>
+    </div>
+
+    <!-- 헤더메뉴 -->
+    <nav>
+        <ul class="mainMenu">
+            <li>
+                <a href="#">검색/구매</a>
+                <ul class="subMenu">
+                    <li>
+                        <a href="#">행사상품 찾기</a>
+                    </li>
+                    <li>
+                        <a href="#">종류별로 찾기</a>
+                    </li>
+                    <li>
+                        <a href="#">제조사별로 찾기</a>
+                    </li>
+                    <li>
+                        <a href="#">상세정보 찾기</a>
+                    </li>
+                    <li>
+                        <a href="#">희귀, 한정판 찾기</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">중고품/수리</a>
+                <ul class="subMenu">
+                    <li><a href="#">최신중고품</a></li>
+                    <li><a href="#">중고품매매</a></li>
+                    <li><a href="#">수리점검색</a></li>
+                    <li><a href="#">수리위탁예약</a></li>
+                    <li><a href="#">부품, 공구, 액세서리 찾기</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">커뮤니티</a>
+                <ul class="subMenu">
+                    <li><a href="#">RC동호회</a></li>
+                    <li><a href="#">트랙, 스테이지 대여</a></li>
+                    <li><a href="#">행사 찾기</a></li>
+                    <li><a href="#">대회 찾기</a></li>
+                    <li><a href="#">RC, 드론 교육 영상</a></li>
+                    <li><a href="#">RC, 드론 교육장 찾기</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    </div>
+    </header>
+    
+    <!-- 이미지 슬라이드 -->
+    <div id="slides">
+    <a href="#">
+      <video autoplay muted loop>
+        <source src="./images/videoSlice.mp4" type="video/mp4">
+      </video>
+    </a>
+    </div>
+    
+    <!-- 컨텐츠 -->
+    <section>
+    <div class="wrap">
+        <!-- 짧은 배너 -->
+        <div class="shortBanners">
+            <ul>
+                <li><a href="#"><img src="./images/shortBanner1.jpg" alt="할인행사 상품보기"></a></li>
+                <li><a href="#"><img src="./images/shortBanner2.jpg" alt="한정판, 희귀상품"></a></li>
+            </ul>
+        </div>
+        <!-- 인기상품 -->
+        <div class="shopList">
+        <h3>이번달 인기 상품</h3>
+            <ul class="itemList">
+                <li>
+                    <a href="javascript:weOnlyHaveThis()">
+                        <div class="shopImg">
+                        <img src="./shoppingItems/item1.jpg" alt="인기상품1">
+                        </div>
+                        <p>Ford Bronco RTR</p>
+                        <span>￦145,000</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:weOnlyHaveThis()">
+                        <div class="shopImg">
+                        <img src="./shoppingItems/item2.jpg" alt="인기상품2">
+                        </div>
+                        <p>Cirrus SR22T</p>
+                        <span>￦180,000</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:weOnlyHaveThis()">
+                        <div class="shopImg">
+                        <img src="./shoppingItems/item6.jpg" alt="인기상품3">
+                        </div>
+                        <p>TCR A90RB</p>
+                        <span>￦240,000</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:weOnlyHaveThis()">
+                        <div class="shopImg">
+                        <img src="./logoNicons/logo.png" alt="인기상품4">
+                        </div>
+                        <p>RSA SM7</p>
+                        <span>￦120,000</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="shopButtons">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 긴 배너1 -->
+    <a href="#">
+        <img src="./images/longBanner1.jpg" alt="long banner">
+    </a>
+    
+    <div class="wrap">
+        <!-- 신규상품 -->
+        <div class="shopList">
+            <h3>이번달 신규 입고 상품</h3>
+
+            <ul class="itemList">
+                <li>
+                    <a href="javascript:weOnlyHaveThis()">
+                        <div class="shopImg">
+                            <img src="./shoppingItems/item3.jpg" alt="신규상품1">
+                        </div>
+                        <p>Timber X BNF</p>
+                        <span>￦380,000</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:weOnlyHaveThis()">
+                        <div class="shopImg">
+                        <img src="./shoppingItems/item4.jpg" alt="신규상품2">
+                        </div>
+                        <p>Gilamon 2.2 RTR</p>
+                        <span>￦600,000</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:weOnlyHaveThis()">
+                        <div class="shopImg">
+                        <img src="./shoppingItems/item5.jpg" alt="신규상품3">
+                        </div>
+                        <p>RC8T4e</p>
+                        <span>￦680,000</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:weOnlyHaveThis()">
+                        <div class="shopImg">
+                        <img src="./logoNicons/logo.png" alt="신규상품4">
+                        </div>
+                        <p>KIA K7</p>
+                        <span>￦100,000</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="shopButtons">
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 긴 배너2 -->
+    <a href="#">
+        <img src="./images/longBanner2.jpg" alt="long banner">
+    </a>
+        
+        <!-- 바로가기 -->
+    <div class="wrap">
+        <div class="direct">
+            <ul>
+                <li><a href=""><img src="./images/direct1.jpg" alt="인기 중고 상품"></a></li>
+                <li><a href=""><img src="./images/direct2.jpg" alt="드론 & RC항공기"></a></li>
+                <li><a href=""><img src="./images/direct3.jpg" alt="부품, 공구, 엑세서리"></a></li>
+                <li><a href=""><img src="./images/direct4.jpg" alt="인기 동호회 찾기"></a></li>
+                <li><a href=""><img src="./images/direct5.jpg" alt="RC, 드론 교육"></a></li>
+                <li><a href=""><img src="./images/direct6.jpg" alt="최근 대회, 행사 찾기"></a></li>
+            </ul>
+        </div>
+    </div>
+    </section>
+    
+    <!-- 푸터 -->
+    <footer>
+    <div class="wrap">
+        <div class="footerMenu">
+            <ul>
+                <li><a href="#">상품 구매</a></li>
+                <li><a href="#">모든 제품 보기</a></li>
+                <li><a href="#">할인 행사 상품</a></li>
+                <li><a href="#">중고품 매매</a></li>
+                <li><a href="#">쿠폰, 기프트 카드</a></li>
+                <li><a href="#">선물하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">멤버 서비스</a></li>
+                <li><a href="#">수리 센터</a></li>
+                <li><a href="#">모든 동호회 보기</a></li>
+                <li><a href="#">모든 대회 & 행사</a></li>
+                <li><a href="#">RC 교육</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">고객 지원</a></li>
+                <li><a href="#">사이트 이용 방법</a></li>
+                <li><a href="#">기술 지원</a></li>
+                <li><a href="#">자주 묻는 질문</a></li>
+                <li><a href="#">결재, 배송 확인</a></li>
+                <li><a href="#">구매품 파손 신고</a></li>
+                <li><a href="#">Q & A</a></li>
+            </ul>
+            
+            <ul>
+                <li><a href="#">about play!eRC</a></li>
+                <li><a href="#">회사 개요</a></li>
+                <li><a href="#">개인 정보 보호 정책</a></li>
+                <li><a href="#">채용 정보</a></li>
+                <li><a href="#">연락처, 오시는 길</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+        </div>
+        <div class="footerRight">
+            <div class="subscribe">
+                <p>
+                    세일 행사, 인기 상품을 찾고 계신가요?<br>
+                    대회나 동호회에 참가하고 싶나요?<br>
+                    RC나 드론이 처음이라 배우고 싶나요?<br>
+                    <span>구독하셔서 더 많은 정보를 받아보세요!!!</span>
+                </p>
+                <form name="toSubscribe" action=javascript:goSubscribe()>
+                    <input type="email" name="subscribe" placeholder="이메일을 입력해주세요">
+                    <span><input type="submit" value="구독"></span>
+                </form>
+            </div>
+            
+            <div class="sns">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="./logoNicons/facebook.png" alt="sns1">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./logoNicons/instagram.png" alt="sns2">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./logoNicons/youtybe.png" alt="sns3">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./logoNicons/kakaotalk.png" alt="sns4">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./logoNicons/line.png" alt="sns5">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./logoNicons/X.png" alt="sns6">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./logoNicons/tiktok.png" alt="sns7">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+        <div class="copy">
+            Copyright ⓒ Eo-jin Nam & play!eRC
+        </div>
+    </div>
+    </footer>
+</body>
+</html>

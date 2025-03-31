@@ -1,0 +1,253 @@
+@charset "utf-8";
+
+/* 메인화면 */
+/* 이미지 슬라이드 */
+#slides {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: var(--black1);
+    height: 30vw;
+    overflow: hidden;
+    position: relative;
+}
+
+#slides video {
+    display: block;
+    margin: auto;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: var(--setAxisCenter);
+}
+
+#slides span {
+    font-size: 50px;
+    color: #ffffff;
+    position: absolute;
+    width: 100%;
+    transform: var(--setAxisCenter);
+    text-shadow: 3px 3px 5px var(--black1);
+    text-align: center;
+}
+
+#slides span:nth-of-type(1) {
+    font-size: 50px;
+    top: 45%;
+    left: 50%;
+}
+#slides span:nth-of-type(2) {
+    font-size: 30px;
+    top: 65%;
+    left: 50%;
+
+}
+
+/* 콘텐츠 */
+section::after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+/* 짧은 배너 */
+section .shortBanners {
+    width: 100%;
+    margin: 100px 0;
+}
+
+section .shortBanners::after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+section .shortBanners li{
+    width: 590px;
+    height: 320px;
+    float: left;
+    background-color: rgb(200, 232, 252);
+    
+}
+
+section .shortBanners li:first-child {
+    margin-right: 10px;
+}
+
+section .shortBanners li:last-child {
+    margin-left: 10px;
+}
+
+/* 긴 배너 */
+section>a {
+
+    margin-bottom: 20px;
+}
+section>a>img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* 메인 화면 상품 목록 */
+section .shopList {
+    margin: 100px 0;
+}
+
+section .shopList::after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+section .shopList>h3 {
+    text-align: center;
+    color: #ffffff;
+    background-color: var(--blue1);
+    margin-bottom: 20px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+}
+
+section .shopList .itemList li{
+    box-sizing: border-box;
+    width: 285px;
+    margin: 0 10px;
+    background-color: var(--blue3);
+    float: left;
+    border-radius: 20px;
+    padding-bottom: 35px;
+}
+
+section .shopList .itemList li:first-child{
+    margin-left: 0;
+}
+
+section .shopList .itemList li:last-child{
+    margin-right: 0;
+}
+
+section .shopList .itemList li a{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+section .shopList .itemList li .shopImg {
+    width: 215px;
+    height: 215px;
+    position: relative;
+    top: 35px;
+    left: 35px;
+    margin-bottom: 70px;
+    background-color: #ffffff;
+    overflow: hidden;
+    border-radius: 20px;
+    text-align: center;
+}
+
+section .shopList .itemList li img {
+    height: 100%;
+    transition: 0.5s;
+    display: inline-block;
+}
+
+section .shopList a:hover img{
+    transform: scale(1.5);
+    
+}
+
+section .shopList .itemList::after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+section .shopList p {
+    color: #555555;
+    margin: 0 35px 5px;
+    font-size: 23px;
+}
+
+section .shopList span {
+    color: #999999;
+    margin: 0 35px;
+}
+
+/* 메인화면 상품 페이징 */
+section .shopButtons {
+    width: 310px;
+    height: 70px;
+    position: relative;
+    transform: var(--setHorizonalCenter);
+    left: 50%;
+}
+
+section .shopButtons>li {
+    width: 30px;
+    height: 30px;
+    margin: 20px;
+    float: left;
+    border-radius: 50%;
+}
+
+section .shopButtons>li:first-child {
+    margin-left: 0;
+}
+
+section .shopButtons>li:last-child {
+    margin-right: 0;
+}
+
+section .shopButtons>li>a {
+    width: 30px;
+    height: 30px;
+    background-color: var(--blue3);
+    border-radius: 50%;
+}
+
+section .shopButtons>li:first-of-type>a {
+    background-color: var(--blue1);
+}
+
+/* 메인화면 바로가기 */
+
+section .direct {
+    margin: 100px 0;
+}
+
+section .direct::after, section .direct ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+section .direct>ul {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+
+section .direct>ul>li{
+    background-color: #555;
+    width: calc((1200px - 40px) / 3);
+    height: 320px;
+    margin: 0 10px;
+    float: left;
+}
+
+section .direct>ul>li:nth-of-type(n+4){
+    margin: 20px 10px;
+    
+}
+
+section .direct>ul>li:nth-of-type(3n){
+    margin-right:0;
+}
+
+section .direct>ul>li:nth-of-type(3n+1){
+    margin-left:0;
+}
+
+section .direct>ul>li:hover {
+    opacity: 0.57;
+}
