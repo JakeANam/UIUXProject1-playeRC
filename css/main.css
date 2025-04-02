@@ -21,28 +21,6 @@
     transform: var(--setAxisCenter);
 }
 
-#slides span {
-    font-size: 50px;
-    color: #ffffff;
-    position: absolute;
-    width: 100%;
-    transform: var(--setAxisCenter);
-    text-shadow: 3px 3px 5px var(--black1);
-    text-align: center;
-}
-
-#slides span:nth-of-type(1) {
-    font-size: 50px;
-    top: 45%;
-    left: 50%;
-}
-#slides span:nth-of-type(2) {
-    font-size: 30px;
-    top: 65%;
-    left: 50%;
-
-}
-
 /* 콘텐츠 */
 section::after {
     content: "";
@@ -67,7 +45,6 @@ section .shortBanners li{
     height: 320px;
     float: left;
     background-color: rgb(200, 232, 252);
-    
 }
 
 section .shortBanners li:first-child {
@@ -227,7 +204,6 @@ section .shopButtons>li:first-of-type>a {
 }
 
 /* 메인화면 바로가기 */
-
 section .direct {
     margin: 100px 0;
 }

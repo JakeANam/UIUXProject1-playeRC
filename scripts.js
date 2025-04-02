@@ -1,7 +1,5 @@
 // jQuery
 jQuery(document).ready(function(){
-    //alert($('.item_table tr:nth-of-type(2) td>p').text());  
-    
     /* 메인메뉴에 포인터 올리면 서브 바꾸기 */
     $('nav>.mainMenu>li').mouseover(function(){
         $(this).children('.subMenu').show();
@@ -29,10 +27,10 @@ jQuery(document).ready(function(){
 
     /* 상세페이지 수량 변경 */
     $(".counting>li").click(function(){
- 
         let clicked = $(this).index();
         let currentCount = Number($(this).siblings("li:nth-of-type(2)").text());
         let countOption = $(this).siblings("span").text();
+        let currentCost = 0;
     
         if (countOption == "pOptions") {
             if (clicked > 0) {
@@ -48,9 +46,14 @@ jQuery(document).ready(function(){
               }
         }
         
-
         $(this).siblings("li:nth-of-type(2)").text(currentCount);
+        changeCost(countOption, currentCost, currentCount)
     });
+
+    // /* 상세페이지 가격 변경 */
+    // function changeCost(countOption, currentCost, currentCount) {
+
+    // }
 
     /* 상세페이지 상세정보 탭 버튼 누르면 내용 바꾸기 */
     $('section .infoTags>li').click(function(){
@@ -62,6 +65,7 @@ jQuery(document).ready(function(){
     
 }); 
 
+// Javascript
 /* 헤더 검색 */
 function goSearch() {
     let searchValue = toSearch.search.value;
